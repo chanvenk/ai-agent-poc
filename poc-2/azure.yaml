@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.6.0/azure.yaml.schema.json
+
+name: python-calculator-agent
+metadata:
+  template: microsoft-foundry-python-hosted-agent
+
+services:
+  # 1. The Azure AI Foundry Project and its Model Deployment
+  aiProject:
+    host: azure.ai.project
+    project: .
+    deployments:
+      - name: gpt-4o
+        model:
+          format: OpenAI
+          name: gpt-4o
+          version: "2024-05-13"
+        sku:
+          name: GlobalStandard
+          capacity: 10
+
+  # 2. The Python Hosted Agent Service
+  calculatorAgent:
+    host: azure.ai.agent
+    kind: hosted
+    language: python
+    project: src
+    uses:
+      - aiProject
+    protocols:
+      - responses
+    startupCommand: "python main.py"
+    container:
+      resources:
+        cpu: "0.5"
+        memory: "1.0Gi"
+    env:
+      LOG_LEVEL: "INFO"
