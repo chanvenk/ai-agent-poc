@@ -1,7 +1,7 @@
 {
     "agent": {
         "name": "foundry-demo-agent-prod",
-        "model": "gpt-4o",
+        "model": "gpt-5-mini",
         "instructions_file": "src/agent/prompts/system_prompt.prod.md",
 
         "tools": [
@@ -18,7 +18,7 @@
 
     "evaluation": {
         "enabled": true,
-        "model": "gpt-4o-mini",
+        "model": "gpt-5-nano",
         "dataset": "src/tests/integration/eval_dataset.jsonl",
         "thresholds": {
             "groundedness": 4.0,

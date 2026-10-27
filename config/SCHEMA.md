@@ -121,9 +121,9 @@ infra/environments/{env}.parameters.json    →    Bicep deploys model    →   
 ```json
 // infra/environments/dev.parameters.json
 "modelDeployments": [{
-    "name": "gpt-4o-mini",        // ← This must match agent.model
-    "model": "gpt-4o-mini",
-    "version": "2024-07-18",
+    "name": "gpt-5-nano",        // ← This must match agent.model
+    "model": "gpt-5-nano",
+    "version": "2025-08-07",
     "sku": "GlobalStandard",
     "capacity": 10                // TPM in thousands
 }]

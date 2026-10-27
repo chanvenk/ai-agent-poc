@@ -50,13 +50,13 @@ services:
 # ---------------------------------------------------------------------------
 ai:
   models:
-    - name: gpt-4o-mini
-      version: "2024-07-18"
+    - name: gpt-5-nano
+      version: "2025-08-07"
       sku:
         name: GlobalStandard
         capacity: 10    # Tokens per minute (in thousands)
-    - name: gpt-4o
-      version: "2024-11-20"
+    - name: gpt-5-mini
+      version: "2025-08-07"
       sku:
         name: GlobalStandard
         capacity: 30

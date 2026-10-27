@@ -194,6 +194,7 @@ def load_agent_config(environment: str, project_root: Path | None = None) -> Age
     # Add git commit SHA if available (set by CI/CD pipeline)
     git_sha = os.environ.get("GIT_SHA", os.environ.get("GITHUB_SHA", "local"))
     metadata["git_sha"] = git_sha[:8]  # Short SHA for readability
+    metadata["azd-service-name"] = "agent"
 
     # -------------------------------------------------------------------------
     # Step 5: Return the fully-populated config

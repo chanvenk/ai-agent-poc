@@ -38,9 +38,9 @@ param environment string
 @description('Model deployments to create')
 param modelDeployments array = [
   {
-    name: 'gpt-4o-mini'
-    model: 'gpt-4o-mini'
-    version: '2024-07-18'
+    name: 'gpt-5-nano'
+    model: 'gpt-5-nano'
+    version: '2025-08-07'
     sku: 'GlobalStandard'
     capacity: 10
   }
